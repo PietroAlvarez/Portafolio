@@ -9,11 +9,11 @@ import { TranslationService } from "../../services/translation.service";
   template: `
     <div class="biography-container">
       <div class="container">
-        <h1>{{ t('bio.title') }}</h1>
+        <h1>{{ t("bio.title") }}</h1>
         <div class="bio-content">
           <div class="bio-text">
             <p>
-              {{ t('bio.text') }}
+              {{ t("bio.text") }}
             </p>
           </div>
         </div>
@@ -24,7 +24,7 @@ import { TranslationService } from "../../services/translation.service";
 })
 export class BiographyComponent {
   translationService = inject(TranslationService);
-  
+
   t(key: string): string {
     return this.translationService.translate(key);
   }

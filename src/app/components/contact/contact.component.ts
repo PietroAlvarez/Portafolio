@@ -21,13 +21,13 @@ import { TranslationService } from "../../services/translation.service";
   template: `
     <div class="contact-container">
       <div class="container">
-        <h1>{{ t('contact.title') }}</h1>
+        <h1>{{ t("contact.title") }}</h1>
 
         <div class="contact-content">
           <div class="contact-info">
-            <h3>{{ t('contact.subtitle') }}</h3>
+            <h3>{{ t("contact.subtitle") }}</h3>
             <p>
-              {{ t('contact.description') }}
+              {{ t("contact.description") }}
             </p>
 
             <div class="contact-methods">
@@ -60,7 +60,7 @@ import { TranslationService } from "../../services/translation.service";
           <div class="contact-form">
             <form>
               <div class="form-group">
-                <label for="name">{{ t('contact.form.name') }}</label>
+                <label for="name">{{ t("contact.form.name") }}</label>
                 <input
                   type="text"
                   id="name"
@@ -72,7 +72,7 @@ import { TranslationService } from "../../services/translation.service";
               </div>
 
               <div class="form-group">
-                <label for="email">{{ t('contact.form.email') }}</label>
+                <label for="email">{{ t("contact.form.email") }}</label>
                 <input
                   type="email"
                   id="email"
@@ -84,7 +84,7 @@ import { TranslationService } from "../../services/translation.service";
               </div>
 
               <div class="form-group">
-                <label for="subject">{{ t('contact.form.subject') }}</label>
+                <label for="subject">{{ t("contact.form.subject") }}</label>
                 <input
                   type="text"
                   id="subject"
@@ -96,7 +96,7 @@ import { TranslationService } from "../../services/translation.service";
               </div>
 
               <div class="form-group">
-                <label for="message">{{ t('contact.form.message') }}</label>
+                <label for="message">{{ t("contact.form.message") }}</label>
                 <textarea
                   id="message"
                   pInputTextarea
@@ -125,7 +125,7 @@ import { TranslationService } from "../../services/translation.service";
 })
 export class ContactComponent {
   translationService = inject(TranslationService);
-  
+
   contactForm = {
     name: "",
     email: "",

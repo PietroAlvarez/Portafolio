@@ -11,7 +11,7 @@ import { TranslationService } from "../../services/translation.service";
   template: `
     <div class="projects-container">
       <div class="container">
-        <h1>{{ t('projects.title') }}</h1>
+        <h1>{{ t("projects.title") }}</h1>
         <div class="projects-grid">
           <!-- Proyecto 1 -->
           <p-card class="project-card">
@@ -21,9 +21,9 @@ import { TranslationService } from "../../services/translation.service";
               </div>
             </ng-template>
             <ng-template pTemplate="content">
-              <h3>{{ t('projects.project1.title') }}</h3>
+              <h3>{{ t("projects.project1.title") }}</h3>
               <p>
-                {{ t('projects.project1.desc') }}
+                {{ t("projects.project1.desc") }}
               </p>
               <div class="project-technologies">
                 <span class="tech-tag">Angular</span>
@@ -41,9 +41,9 @@ import { TranslationService } from "../../services/translation.service";
               </div>
             </ng-template>
             <ng-template pTemplate="content">
-              <h3>{{ t('projects.project2.title') }}</h3>
+              <h3>{{ t("projects.project2.title") }}</h3>
               <p>
-                {{ t('projects.project2.desc') }}
+                {{ t("projects.project2.desc") }}
               </p>
               <div class="project-technologies">
                 <span class="tech-tag">Angular</span>
@@ -60,9 +60,9 @@ import { TranslationService } from "../../services/translation.service";
               </div>
             </ng-template>
             <ng-template pTemplate="content">
-              <h3>{{ t('projects.project3.title') }}</h3>
+              <h3>{{ t("projects.project3.title") }}</h3>
               <p>
-                {{ t('projects.project3.desc') }}
+                {{ t("projects.project3.desc") }}
               </p>
               <div class="project-technologies">
                 <span class="tech-tag">Angular</span>
@@ -78,7 +78,7 @@ import { TranslationService } from "../../services/translation.service";
 })
 export class ProjectsComponent {
   translationService = inject(TranslationService);
-  
+
   t(key: string): string {
     return this.translationService.translate(key);
   }
