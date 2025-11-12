@@ -29,7 +29,7 @@ import { FormsModule } from "@angular/forms";
               Me encantaría escuchar sobre tu proyecto. No dudes en contactarme
               a través del formulario o por los medios que prefieras.
             </p>
-            
+
             <div class="contact-methods">
               <div class="contact-method">
                 <i class="pi pi-envelope"></i>
@@ -46,73 +46,76 @@ import { FormsModule } from "@angular/forms";
             </div>
 
             <div class="social-links">
-              <a href="https://www.linkedin.com/in/pietro-antonello-francesco-alvarez-gazzola-33280438" class="social-link" target="_blank" rel="noopener">
+              <a
+                href="https://www.linkedin.com/in/pietro-antonello-francesco-alvarez-gazzola-33280438"
+                class="social-link"
+                target="_blank"
+                rel="noopener"
+              >
                 <i class="pi pi-linkedin"></i>
               </a>
             </div>
           </div>
 
           <div class="contact-form">
-            <p-card>
-              <form>
-                <div class="form-group">
-                  <label for="name">Nombre</label>
-                  <input
-                    type="text"
-                    id="name"
-                    pInputText
-                    [(ngModel)]="contactForm.name"
-                    name="name"
-                    placeholder="Tu nombre completo"
-                  />
-                </div>
+            <form>
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  pInputText
+                  [(ngModel)]="contactForm.name"
+                  name="name"
+                  placeholder="Tu nombre completo"
+                />
+              </div>
 
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    pInputText
-                    [(ngModel)]="contactForm.email"
-                    name="email"
-                    placeholder="tu@email.com"
-                  />
-                </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  pInputText
+                  [(ngModel)]="contactForm.email"
+                  name="email"
+                  placeholder="tu&#64;email.com"
+                />
+              </div>
 
-                <div class="form-group">
-                  <label for="subject">Asunto</label>
-                  <input
-                    type="text"
-                    id="subject"
-                    pInputText
-                    [(ngModel)]="contactForm.subject"
-                    name="subject"
-                    placeholder="Asunto del mensaje"
-                  />
-                </div>
+              <div class="form-group">
+                <label for="subject">Asunto</label>
+                <input
+                  type="text"
+                  id="subject"
+                  pInputText
+                  [(ngModel)]="contactForm.subject"
+                  name="subject"
+                  placeholder="Asunto del mensaje"
+                />
+              </div>
 
-                <div class="form-group">
-                  <label for="message">Mensaje</label>
-                  <textarea
-                    id="message"
-                    pInputTextarea
-                    [(ngModel)]="contactForm.message"
-                    name="message"
-                    rows="6"
-                    placeholder="Escribe tu mensaje aquí..."
-                  >
-                  </textarea>
-                </div>
-
-                <p-button
-                  label="Enviar Mensaje"
-                  icon="pi pi-send"
-                  (click)="sendMessage()"
-                  styleClass="w-100"
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  pInputTextarea
+                  [(ngModel)]="contactForm.message"
+                  name="message"
+                  rows="6"
+                  placeholder="Escribe tu mensaje aquí..."
                 >
-                </p-button>
-              </form>
-            </p-card>
+                </textarea>
+              </div>
+
+              <p-button
+                label="Enviar Mensaje"
+                icon="pi pi-send"
+                (click)="sendMessage()"
+                styleClass="w-100"
+              >
+              </p-button>
+            </form>
           </div>
         </div>
       </div>
