@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import { TranslationService } from "../../services/translation.service";
 
 @Component({
   selector: "app-biography",
@@ -8,20 +9,11 @@ import { CommonModule } from "@angular/common";
   template: `
     <div class="biography-container">
       <div class="container">
-        <h1>Sobre Mí</h1>
+        <h1>{{ t('bio.title') }}</h1>
         <div class="bio-content">
           <div class="bio-text">
             <p>
-              Mi nombre es Pietro Alvarez. Nací el 29 de Abril del año 1994 en
-              Santiago de Chile y actualmente vivo en Italia desde Octubre de
-              2023. Soy programador web con experiencia en desarrollo de
-              plataformas de pagos, cursos y estudiantes, así como en la
-              creación de sitios web para empresas y turismo.
-            </p>
-            <p>
-              Puedes incluir información sobre tus objetivos profesionales, tus
-              hobbies, y todo lo que consideres relevante para que las personas
-              te conozcan mejor.
+              {{ t('bio.text') }}
             </p>
           </div>
         </div>
@@ -30,4 +22,10 @@ import { CommonModule } from "@angular/common";
   `,
   styleUrls: ["./biography.component.scss"],
 })
-export class BiographyComponent {}
+export class BiographyComponent {
+  translationService = inject(TranslationService);
+  
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
+}

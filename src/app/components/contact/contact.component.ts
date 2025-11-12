@@ -1,10 +1,11 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { CardModule } from "primeng/card";
 import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { ButtonModule } from "primeng/button";
 import { FormsModule } from "@angular/forms";
+import { TranslationService } from "../../services/translation.service";
 
 @Component({
   selector: "app-contact",
@@ -20,14 +21,13 @@ import { FormsModule } from "@angular/forms";
   template: `
     <div class="contact-container">
       <div class="container">
-        <h1>Contacto</h1>
+        <h1>{{ t('contact.title') }}</h1>
 
         <div class="contact-content">
           <div class="contact-info">
-            <h3>¿Tienes un proyecto en mente?</h3>
+            <h3>{{ t('contact.subtitle') }}</h3>
             <p>
-              Me encantaría escuchar sobre tu proyecto. No dudes en contactarme
-              a través del formulario o por los medios que prefieras.
+              {{ t('contact.description') }}
             </p>
 
             <div class="contact-methods">
@@ -60,56 +60,56 @@ import { FormsModule } from "@angular/forms";
           <div class="contact-form">
             <form>
               <div class="form-group">
-                <label for="name">Nombre</label>
+                <label for="name">{{ t('contact.form.name') }}</label>
                 <input
                   type="text"
                   id="name"
                   pInputText
                   [(ngModel)]="contactForm.name"
                   name="name"
-                  placeholder="Tu nombre completo"
+                  [placeholder]="t('contact.form.placeholder.name')"
                 />
               </div>
 
               <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">{{ t('contact.form.email') }}</label>
                 <input
                   type="email"
                   id="email"
                   pInputText
                   [(ngModel)]="contactForm.email"
                   name="email"
-                  placeholder="tu&#64;email.com"
+                  [placeholder]="t('contact.form.placeholder.email')"
                 />
               </div>
 
               <div class="form-group">
-                <label for="subject">Asunto</label>
+                <label for="subject">{{ t('contact.form.subject') }}</label>
                 <input
                   type="text"
                   id="subject"
                   pInputText
                   [(ngModel)]="contactForm.subject"
                   name="subject"
-                  placeholder="Asunto del mensaje"
+                  [placeholder]="t('contact.form.placeholder.subject')"
                 />
               </div>
 
               <div class="form-group">
-                <label for="message">Mensaje</label>
+                <label for="message">{{ t('contact.form.message') }}</label>
                 <textarea
                   id="message"
                   pInputTextarea
                   [(ngModel)]="contactForm.message"
                   name="message"
                   rows="6"
-                  placeholder="Escribe tu mensaje aquí..."
+                  [placeholder]="t('contact.form.placeholder.message')"
                 >
                 </textarea>
               </div>
 
               <p-button
-                label="Enviar Mensaje"
+                [label]="t('contact.form.send')"
                 icon="pi pi-send"
                 (click)="sendMessage()"
                 styleClass="w-100"
@@ -124,12 +124,18 @@ import { FormsModule } from "@angular/forms";
   styleUrls: ["./contact.component.scss"],
 })
 export class ContactComponent {
+  translationService = inject(TranslationService);
+  
   contactForm = {
     name: "",
     email: "",
     subject: "",
     message: "",
   };
+
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
 
   sendMessage() {
     // Aquí puedes implementar la lógica para enviar el mensaje

@@ -35,9 +35,14 @@ import { TranslationService } from "../../services/translation.service";
           </div>
         </div>
         <div class="hero-image">
-          <div class="placeholder-avatar">
-            <i class="pi pi-user" style="font-size: 4rem; color: #64748b;"></i>
-            <p class="placeholder-text">Tu foto aquí</p>
+          <div class="avatar-container">
+            <div class="avatar-wrapper">
+              <div class="avatar-circle">
+                <i class="pi pi-user"></i>
+              </div>
+              <div class="avatar-glow"></div>
+            </div>
+            <p class="avatar-caption">Pietro Alvarez</p>
           </div>
         </div>
       </section>

@@ -88,7 +88,7 @@ import {
         &:active {
           transform: scale(0.95);
         }
-        
+
         .lang-text {
           letter-spacing: 0.5px;
         }
