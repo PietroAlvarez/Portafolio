@@ -18,7 +18,7 @@ import {
         [title]="lang.name"
         class="lang-btn"
       >
-        {{ lang.flag }}
+        <span class="lang-text">{{ lang.code.toUpperCase() }}</span>
       </button>
     </div>
   `,
@@ -51,23 +51,26 @@ import {
         height: 44px;
         border: 2px solid transparent;
         border-radius: var(--radius-full);
-        background: transparent;
-        font-size: 1.5rem;
+        background: white;
+        font-size: 0.875rem;
+        font-weight: 700;
         cursor: pointer;
         transition: all var(--transition-fast);
         display: flex;
         align-items: center;
         justify-content: center;
+        color: var(--gray-700);
 
         @media (max-width: 768px) {
           width: 38px;
           height: 38px;
-          font-size: 1.25rem;
+          font-size: 0.75rem;
         }
 
         &:hover {
           background: var(--primary-50);
           transform: scale(1.1);
+          color: var(--primary-700);
         }
 
         &.active {
@@ -79,10 +82,15 @@ import {
           border-color: var(--primary-600);
           transform: scale(1.05);
           box-shadow: var(--shadow-md);
+          color: white;
         }
 
         &:active {
           transform: scale(0.95);
+        }
+        
+        .lang-text {
+          letter-spacing: 0.5px;
         }
       }
     `,
