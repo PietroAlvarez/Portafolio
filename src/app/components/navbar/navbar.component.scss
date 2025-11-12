@@ -1,0 +1,109 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  transition: all var(--transition-base);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+:host ::ng-deep .custom-menubar {
+  border: none;
+  border-radius: 0;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  
+  @media (max-width: 768px) {
+    padding: 0.75rem 1rem;
+  }
+  
+  .p-menubar-start {
+    .logo {
+      .logo-text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-800) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-decoration: none;
+        letter-spacing: -0.02em;
+        transition: transform var(--transition-fast);
+        display: inline-block;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  .p-menubar-root-list {
+    gap: 0.25rem;
+  }
+  
+  .p-menuitem-link {
+    color: var(--gray-700);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 0.625rem 1rem;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0.25rem;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 60%;
+      height: 2px;
+      background: var(--primary-600);
+      border-radius: var(--radius-full);
+      transition: transform var(--transition-base);
+    }
+    
+    &:hover {
+      color: var(--primary-700);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+      
+      &::before {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+    
+    &.p-highlight {
+      color: var(--primary-700);
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(37, 99, 235, 0.16) 100%);
+      font-weight: 600;
+      
+      &::before {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
+    
+    .p-menuitem-icon {
+      margin-right: 0.625rem;
+      font-size: 1.1rem;
+      transition: transform var(--transition-fast);
+    }
+    
+    .p-menuitem-text {
+      margin-left: 0.125rem;
+    }
+    
+    &:hover .p-menuitem-icon {
+      transform: translateY(-2px);
+    }
+  }
+}
