@@ -49,6 +49,11 @@
   
   .p-menubar-root-list {
     gap: 0.25rem;
+    margin-left: 2rem;
+    
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
   }
   
   .p-menuitem-link {
