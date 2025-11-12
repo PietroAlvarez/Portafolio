@@ -40,9 +40,11 @@ import {
         border: 1px solid rgba(229, 231, 235, 0.5);
 
         @media (max-width: 768px) {
-          top: 80px;
+          top: 10px;
           right: 10px;
-          padding: 0.375rem;
+          padding: 0.25rem;
+          gap: 0.25rem;
+          box-shadow: var(--shadow-md);
         }
       }
 
@@ -62,9 +64,10 @@ import {
         color: var(--gray-700);
 
         @media (max-width: 768px) {
-          width: 38px;
-          height: 38px;
-          font-size: 0.75rem;
+          width: 32px;
+          height: 32px;
+          font-size: 0.625rem;
+          border-width: 1px;
         }
 
         &:hover {
