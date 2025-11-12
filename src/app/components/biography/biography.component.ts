@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
         <div class="bio-content">
           <div class="bio-text">
             <p>
-              Aquí puedes escribir tu biografía personal y profesional. 
-              Cuenta tu historia, tus pasiones, tu formación académica y tu experiencia laboral.
+                Mi nombre es Pietro Alvarez. Nací el 29 de Abril del año 1994 en Santiago de Chile y actualmente vivo en Italia desde Octubre de 2023.
+                Soy programador web con experiencia en desarrollo de plataformas de pagos, cursos y estudiantes, así como en la creación de sitios web para empresas y turismo.
             </p>
             <p>
               Puedes incluir información sobre tus objetivos profesionales, 

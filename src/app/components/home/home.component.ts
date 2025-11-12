@@ -11,11 +11,12 @@ import { RouterModule } from '@angular/router';
     <div class="home-container">
       <section class="hero-section">
         <div class="hero-content">
-          <h1 class="hero-title">¡Hola! Soy [Tu Nombre]</h1>
-          <h2 class="hero-subtitle">Desarrollador Full Stack</h2>
+            <h1 class="hero-title">¡Hola! Soy Pietro Alvarez</h1>
+            <h2 class="hero-subtitle">Programador web</h2>
           <p class="hero-description">
-            Apasionado por crear soluciones digitales innovadoras y experiencias de usuario excepcionales.
-            Especializado en tecnologías modernas como Angular, Node.js y más.
+              Nacido el 29 de Abril del año 1994 en Santiago de Chile y viviendo en Italia desde Octubre de 2023.
+              Apasionado por crear soluciones digitales innovadoras y experiencias de usuario excepcionales.
+              Especializado en tecnologías modernas como Angular, Node.js y más.
           </p>
           <div class="hero-actions">
             <p-button 

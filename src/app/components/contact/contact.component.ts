@@ -29,31 +29,25 @@ import { FormsModule } from "@angular/forms";
               Me encantaría escuchar sobre tu proyecto. No dudes en contactarme
               a través del formulario o por los medios que prefieras.
             </p>
-
+            
             <div class="contact-methods">
               <div class="contact-method">
                 <i class="pi pi-envelope"></i>
-                <span>tu.email&#64;ejemplo.com</span>
+                <span>pietro103&#64;hotmail.com</span>
               </div>
               <div class="contact-method">
-                <i class="pi pi-phone"></i>
-                <span>+XX XXX XXX XXX</span>
+                <i class="pi pi-envelope"></i>
+                <span>pietro103.lavoro&#64;gmail.com</span>
               </div>
               <div class="contact-method">
                 <i class="pi pi-map-marker"></i>
-                <span>Tu ubicación</span>
+                <span>Italia / Chile</span>
               </div>
             </div>
 
             <div class="social-links">
-              <a href="#" class="social-link">
-                <i class="pi pi-github"></i>
-              </a>
-              <a href="#" class="social-link">
+              <a href="https://www.linkedin.com/in/pietro-antonello-francesco-alvarez-gazzola-33280438" class="social-link" target="_blank" rel="noopener">
                 <i class="pi pi-linkedin"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="pi pi-twitter"></i>
               </a>
             </div>
           </div>
