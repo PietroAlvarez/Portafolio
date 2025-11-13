@@ -95,12 +95,12 @@ export class HomeComponent {
 
   downloadCV() {
     // Usar window.open para evitar que Angular Router intercepte la ruta
-    const cvUrl = 'assets/CV_Pietro_Alvarez.pdf';
-    const link = document.createElement('a');
+    const cvUrl = "assets/CV_Pietro_Alvarez.pdf";
+    const link = document.createElement("a");
     link.href = cvUrl;
-    link.download = 'CV_Pietro_Alvarez.pdf';
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
+    link.download = "CV_Pietro_Alvarez.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -4,6 +4,7 @@ import { RouterOutlet } from "@angular/router";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { LanguageSelectorComponent } from "./components/language-selector/language-selector.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { ThemeToggleComponent } from "./components/theme-toggle/theme-toggle.component";
 
 @Component({
   selector: "app-root",
@@ -14,10 +15,12 @@ import { FooterComponent } from "./components/footer/footer.component";
     NavbarComponent,
     LanguageSelectorComponent,
     FooterComponent,
+    ThemeToggleComponent,
   ],
   template: `
     <div class="app-container">
       <app-language-selector></app-language-selector>
+      <app-theme-toggle></app-theme-toggle>
       <app-navbar></app-navbar>
       <main class="main-content">
         <router-outlet></router-outlet>

@@ -6,6 +6,7 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import { ButtonModule } from "primeng/button";
 import { FormsModule } from "@angular/forms";
 import { TranslationService } from "../../services/translation.service";
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: "app-contact",
@@ -109,12 +110,21 @@ import { TranslationService } from "../../services/translation.service";
               </div>
 
               <p-button
-                [label]="t('contact.form.send')"
+                [label]="sending ? 'Enviando...' : t('contact.form.send')"
                 icon="pi pi-send"
                 (click)="sendMessage()"
+                [disabled]="sending"
+                [loading]="sending"
                 styleClass="w-100"
               >
               </p-button>
+              
+              <div *ngIf="successMessage" class="success-message">
+                <i class="pi pi-check-circle"></i> {{ successMessage }}
+              </div>
+              <div *ngIf="errorMessage" class="error-message">
+                <i class="pi pi-times-circle"></i> {{ errorMessage }}
+              </div>
             </form>
           </div>
         </div>
@@ -133,13 +143,73 @@ export class ContactComponent {
     message: "",
   };
 
+  sending = false;
+  successMessage = '';
+  errorMessage = '';
+
+  // Configura estos valores con tu cuenta de EmailJS
+  // Regístrate gratis en https://www.emailjs.com/
+  private readonly EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID'; // Reemplazar
+  private readonly EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // Reemplazar
+  private readonly EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Reemplazar
+
   t(key: string): string {
     return this.translationService.translate(key);
   }
 
-  sendMessage() {
-    // Aquí puedes implementar la lógica para enviar el mensaje
-    console.log("Formulario enviado:", this.contactForm);
-    // Por ahora solo mostraremos el contenido en la consola
+  async sendMessage() {
+    // Validaciones básicas
+    if (!this.contactForm.name || !this.contactForm.email || !this.contactForm.message) {
+      this.errorMessage = 'Por favor completa todos los campos obligatorios';
+      setTimeout(() => this.errorMessage = '', 5000);
+      return;
+    }
+
+    // Validar email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.contactForm.email)) {
+      this.errorMessage = 'Por favor ingresa un email válido';
+      setTimeout(() => this.errorMessage = '', 5000);
+      return;
+    }
+
+    this.sending = true;
+    this.errorMessage = '';
+    this.successMessage = '';
+
+    try {
+      const templateParams = {
+        from_name: this.contactForm.name,
+        from_email: this.contactForm.email,
+        subject: this.contactForm.subject,
+        message: this.contactForm.message,
+        to_email: 'pietro103@hotmail.com', // Tu email
+      };
+
+      await emailjs.send(
+        this.EMAILJS_SERVICE_ID,
+        this.EMAILJS_TEMPLATE_ID,
+        templateParams,
+        this.EMAILJS_PUBLIC_KEY
+      );
+
+      this.successMessage = '¡Mensaje enviado con éxito! Te responderé pronto.';
+      
+      // Limpiar formulario
+      this.contactForm = {
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+      };
+
+      setTimeout(() => this.successMessage = '', 5000);
+    } catch (error) {
+      console.error('Error al enviar email:', error);
+      this.errorMessage = 'Hubo un error al enviar el mensaje. Por favor intenta de nuevo o contáctame directamente por email.';
+      setTimeout(() => this.errorMessage = '', 5000);
+    } finally {
+      this.sending = false;
+    }
   }
 }

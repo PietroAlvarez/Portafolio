@@ -47,8 +47,8 @@ export class NavbarComponent {
         label: this.translationService.translate("nav.cv"),
         icon: "pi pi-download",
         command: () => {
-          window.open('assets/CV_Pietro_Alvarez.pdf', '_blank');
-        }
+          window.open("assets/CV_Pietro_Alvarez.pdf", "_blank");
+        },
       },
       {
         label: this.translationService.translate("nav.contact"),

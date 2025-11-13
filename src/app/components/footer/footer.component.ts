@@ -30,8 +30,13 @@ import { TranslationService } from "../../services/translation.service";
             >
               <i class="pi pi-linkedin"></i> LinkedIn
             </a>
-            <a href="assets/CV_Pietro_Alvarez.pdf" download target="_blank" rel="noopener">
-              <i class="pi pi-download"></i> {{ t('home.downloadCV') }}
+            <a
+              href="assets/CV_Pietro_Alvarez.pdf"
+              download
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="pi pi-download"></i> {{ t("home.downloadCV") }}
             </a>
           </div>
         </div>
