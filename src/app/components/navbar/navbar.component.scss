@@ -57,7 +57,7 @@
   }
   
   .p-menuitem-link {
-    color: var(--gray-700);
+    color: var(--text-secondary);
     font-weight: 500;
     font-size: 0.95rem;
     padding: 0.625rem 1rem;
@@ -73,14 +73,14 @@
       transform: translateX(-50%) scaleX(0);
       width: 60%;
       height: 2px;
-      background: var(--primary-600);
+      background: var(--primary-500);
       border-radius: var(--radius-full);
       transition: transform var(--transition-base);
     }
     
     &:hover {
-      color: var(--primary-700);
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(37, 99, 235, 0.12) 100%);
+      color: var(--primary-600);
+      background: var(--primary-50);
       
       &::before {
         transform: translateX(-50%) scaleX(1);
@@ -88,8 +88,8 @@
     }
     
     &.p-highlight {
-      color: var(--primary-700);
-      background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(37, 99, 235, 0.16) 100%);
+      color: var(--primary-600);
+      background: var(--primary-100);
       font-weight: 600;
       
       &::before {
