@@ -1,7 +1,8 @@
 .projects-container {
   padding: var(--spacing-3xl) var(--spacing-xl);
   min-height: calc(100vh - 80px);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: var(--bg-secondary);
+  transition: background var(--transition-base);
   
   @media (max-width: 768px) {
     padding: var(--spacing-2xl) var(--spacing-md);
@@ -10,7 +11,7 @@
   h1 {
     text-align: center;
     font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-3xl);
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -48,7 +49,7 @@
   box-shadow: var(--shadow-md);
   transition: all var(--transition-base);
   overflow: hidden;
-  background: white;
+  background: var(--bg-primary);
   
   &:hover {
     transform: translateY(-8px);
@@ -78,8 +79,8 @@
   
   .p-card-footer {
     padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl);
-    border-top: 1px solid var(--gray-100);
-    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    background: var(--bg-secondary);
   }
 }
 

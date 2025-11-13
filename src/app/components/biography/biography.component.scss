@@ -1,7 +1,8 @@
 .biography-container {
   padding: var(--spacing-3xl) var(--spacing-xl);
   min-height: calc(100vh - 80px);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: var(--bg-secondary);
+  transition: background var(--transition-base);
   
   @media (max-width: 768px) {
     padding: var(--spacing-2xl) var(--spacing-md);
@@ -10,7 +11,7 @@
   h1 {
     text-align: center;
     font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-3xl);
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -35,14 +36,15 @@
 }
 
 .bio-text {
-  background: white;
+  background: var(--bg-primary);
   padding: var(--spacing-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-200);
   position: relative;
   overflow: hidden;
   margin-bottom: var(--spacing-2xl);
+  transition: all var(--transition-base);
   
   &::before {
     content: '';
@@ -57,7 +59,7 @@
   p {
     font-size: 1.125rem;
     line-height: 2;
-    color: var(--gray-700);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-lg);
     text-align: justify;
     
@@ -78,11 +80,11 @@
 
 // Estilos adicionales para secciones de habilidades o experiencia si se agregan
 .bio-section {
-  background: white;
+  background: var(--bg-primary);
   padding: var(--spacing-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-md);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-200);
   margin-bottom: var(--spacing-xl);
   transition: all var(--transition-base);
   
@@ -92,7 +94,7 @@
   }
   
   h3 {
-    color: var(--gray-900);
+    color: var(--text-primary);
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: var(--spacing-lg);

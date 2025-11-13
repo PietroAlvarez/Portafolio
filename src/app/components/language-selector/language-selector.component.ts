@@ -31,13 +31,14 @@ import {
         z-index: 2000;
         display: flex;
         gap: 0.5rem;
-        background: rgba(255, 255, 255, 0.95);
+        background: var(--bg-primary);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
         padding: 0.5rem;
         border-radius: var(--radius-full);
         box-shadow: var(--shadow-lg);
-        border: 1px solid rgba(229, 231, 235, 0.5);
+        border: 1px solid var(--gray-200);
+        transition: all var(--transition-base);
 
         @media (max-width: 768px) {
           top: 10px;
@@ -53,7 +54,7 @@ import {
         height: 44px;
         border: 2px solid transparent;
         border-radius: var(--radius-full);
-        background: white;
+        background: var(--bg-secondary);
         font-size: 0.875rem;
         font-weight: 700;
         cursor: pointer;
@@ -61,7 +62,7 @@ import {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--gray-700);
+        color: var(--text-primary);
 
         @media (max-width: 768px) {
           width: 32px;
@@ -74,6 +75,11 @@ import {
           background: var(--primary-50);
           transform: scale(1.1);
           color: var(--primary-700);
+          
+          :host-context(.dark-theme) & {
+            background: rgba(59, 130, 246, 0.2);
+            color: var(--primary-400);
+          }
         }
 
         &.active {

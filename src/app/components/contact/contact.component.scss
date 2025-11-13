@@ -1,7 +1,8 @@
 .contact-container {
   padding: var(--spacing-3xl) var(--spacing-xl);
   min-height: calc(100vh - 80px);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(248, 250, 252, 0.9) 100%);
+  background: var(--bg-secondary);
+  transition: background var(--transition-base);
   
   @media (max-width: 768px) {
     padding: var(--spacing-2xl) var(--spacing-md);
@@ -10,7 +11,7 @@
   h1 {
     text-align: center;
     font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--gray-900);
+    color: var(--text-primary);
     margin-bottom: var(--spacing-3xl);
     font-weight: 800;
     letter-spacing: -0.02em;
@@ -42,22 +43,23 @@
 }
 
 .contact-info {
-  background: white;
+  background: var(--bg-primary);
   padding: var(--spacing-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-200);
   animation: slideInLeft 0.8s ease-out;
+  transition: all var(--transition-base);
   
   h3 {
-    color: var(--gray-900);
+    color: var(--text-primary);
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: var(--spacing-md);
   }
   
   > p {
-    color: var(--gray-600);
+    color: var(--text-secondary);
     line-height: 1.8;
     margin-bottom: var(--spacing-2xl);
     font-size: 1rem;
@@ -146,19 +148,20 @@
 }
 
 .contact-form {
-  background: white;
+  background: var(--bg-primary);
   padding: var(--spacing-2xl);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-  border: 1px solid var(--gray-100);
+  border: 1px solid var(--gray-200);
   animation: fadeInUp 0.8s ease-out 0.2s backwards;
+  transition: all var(--transition-base);
   
   .form-group {
     margin-bottom: var(--spacing-xl);
     
     label {
       display: block;
-      color: var(--gray-800);
+      color: var(--text-primary);
       font-weight: 600;
       margin-bottom: var(--spacing-sm);
       font-size: 0.95rem;
