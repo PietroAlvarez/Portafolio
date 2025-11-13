@@ -44,6 +44,12 @@ export class NavbarComponent {
         routerLink: ["/proyectos"],
       },
       {
+        label: this.translationService.translate("nav.cv"),
+        icon: "pi pi-download",
+        url: "/assets/CV_Pietro_Alvarez.pdf",
+        target: "_blank",
+      },
+      {
         label: this.translationService.translate("nav.contact"),
         icon: "pi pi-envelope",
         routerLink: ["/contacto"],

@@ -38,6 +38,11 @@ export class TranslationService {
       en: "Contact",
       it: "Contatto",
     },
+    "nav.cv": {
+      es: "CV",
+      en: "Resume",
+      it: "CV",
+    },
 
     // Home
     "home.greeting": {

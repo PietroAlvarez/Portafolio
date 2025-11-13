@@ -30,6 +30,9 @@ import { TranslationService } from "../../services/translation.service";
             >
               <i class="pi pi-linkedin"></i> LinkedIn
             </a>
+            <a href="/assets/CV_Pietro_Alvarez.pdf" download>
+              <i class="pi pi-download"></i> {{ t('home.downloadCV') }}
+            </a>
           </div>
         </div>
 
@@ -164,4 +167,9 @@ import { TranslationService } from "../../services/translation.service";
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
+  translationService = inject(TranslationService);
+
+  t(key: string) {
+    return this.translationService.translate(key);
+  }
 }
