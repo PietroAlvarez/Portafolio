@@ -210,7 +210,8 @@
     resize: vertical;
   }
   
-  .w-100 .p-button {
+  /* Estilo del botón de envío: PrimeNG agrega la clase custom en el mismo elemento */
+  .p-button.w-100 {
     width: 100%;
     justify-content: center;
     padding: 1rem;
