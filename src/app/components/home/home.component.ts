@@ -95,7 +95,7 @@ export class HomeComponent {
 
   downloadCV() {
     // Ruta al archivo CV en la carpeta assets
-    const cvPath = '/assets/CV_Pietro_Alvarez.pdf';
+    const cvPath = 'assets/CV_Pietro_Alvarez.pdf';
     const link = document.createElement('a');
     link.href = cvPath;
     link.download = 'CV_Pietro_Alvarez.pdf';
