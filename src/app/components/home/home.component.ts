@@ -26,6 +26,13 @@ import { TranslationService } from "../../services/translation.service";
             >
             </p-button>
             <p-button
+              [label]="t('home.downloadCV')"
+              icon="pi pi-download"
+              (onClick)="downloadCV()"
+              styleClass="p-button-lg p-button-success"
+            >
+            </p-button>
+            <p-button
               [label]="t('home.contact')"
               icon="pi pi-envelope"
               routerLink="/contacto"
@@ -84,5 +91,17 @@ export class HomeComponent {
 
   t(key: string): string {
     return this.translationService.translate(key);
+  }
+
+  downloadCV() {
+    // Ruta al archivo CV en la carpeta assets
+    const cvPath = '/assets/CV_Pietro_Alvarez.pdf';
+    const link = document.createElement('a');
+    link.href = cvPath;
+    link.download = 'CV_Pietro_Alvarez.pdf';
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
 }

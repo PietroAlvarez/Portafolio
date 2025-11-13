@@ -65,6 +65,11 @@ export class TranslationService {
       en: "Contact",
       it: "Contattami",
     },
+    "home.downloadCV": {
+      es: "Descargar CV",
+      en: "Download CV",
+      it: "Scarica CV",
+    },
     "home.skills": {
       es: "Tecnologías Principales",
       en: "Main Technologies",
