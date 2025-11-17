@@ -103,7 +103,7 @@
   }
   
   span {
-    color: var(--gray-700);
+    color: var(--text-secondary);
     font-weight: 500;
     font-size: 0.95rem;
   }
@@ -186,22 +186,24 @@
     padding: 0.875rem 1rem;
     font-size: 1rem;
     transition: all var(--transition-fast);
-    background: var(--gray-50);
+    background: var(--bg-primary);
+    color: var(--text-primary);
     
     &:hover {
       border-color: var(--gray-300);
-      background: white;
+      background: var(--bg-primary);
     }
     
     &:focus {
       border-color: var(--primary-600);
       box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
-      background: white;
+      background: var(--bg-primary);
       outline: none;
     }
     
     &::placeholder {
-      color: var(--gray-400);
+      color: var(--text-secondary);
+      opacity: 0.7;
     }
   }
   

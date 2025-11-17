@@ -98,8 +98,8 @@
   --bg-primary: #111827;
   --bg-secondary: #1f2937;
   --bg-secondary-alpha: rgba(31, 41, 55, 0.85);
-  --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
+  --text-primary: #ffffff;
+  --text-secondary: #f3f4f6;
 
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -266,16 +266,16 @@ a {
 .dark-theme {
   .p-menubar {
     .p-menuitem-link {
-      color: #d1d5db !important;
+      color: #e5e7eb !important;
       
       &:hover {
-        color: #60a5fa !important;
-        background: rgba(59, 130, 246, 0.15) !important;
+        color: #93c5fd !important;
+        background: rgba(147, 197, 253, 0.15) !important;
       }
       
       &.p-highlight {
-        color: #93c5fd !important;
-        background: rgba(59, 130, 246, 0.2) !important;
+        color: #bfdbfe !important;
+        background: rgba(147, 197, 253, 0.2) !important;
       }
     }
   }
