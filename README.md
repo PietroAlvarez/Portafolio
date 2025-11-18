@@ -22,7 +22,7 @@ Sitio web personal desarrollado con Angular 17 y PrimeNG. Portfolio moderno y re
 ## 🛠️ Tecnologías
 
 - **Angular 17** - Framework
-- **PrimeNG 17** - Componentes UI  
+- **PrimeNG 17** - Componentes UI
 - **TypeScript** - Lenguaje
 - **SCSS** - Estilos
 - **EmailJS** - Formulario de contacto
@@ -56,7 +56,7 @@ src/app/
 ## 🔧 Personalización
 
 1. Actualiza información personal en los componentes
-2. Modifica proyectos en `projects.component.ts`  
+2. Modifica proyectos en `projects.component.ts`
 3. Configura EmailJS en `contact.component.ts`
 4. Agrega tu CV en `src/assets/`
 
