@@ -75,7 +75,7 @@ import {
           background: var(--primary-50);
           transform: scale(1.1);
           color: var(--primary-700);
-          
+
           :host-context(.dark-theme) & {
             background: rgba(59, 130, 246, 0.2);
             color: var(--primary-400);

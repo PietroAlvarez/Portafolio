@@ -31,5 +31,5 @@ import { ThemeToggleComponent } from "./components/theme-toggle/theme-toggle.com
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "Mi Portafolio Personal";
+  title = "Portafolio";
 }

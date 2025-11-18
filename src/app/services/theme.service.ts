@@ -1,21 +1,23 @@
-import { Injectable, signal, effect } from '@angular/core';
+import { Injectable, signal, effect } from "@angular/core";
 
-export type Theme = 'light' | 'dark';
+export type Theme = "light" | "dark";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class ThemeService {
-  private currentTheme = signal<Theme>('light');
+  private currentTheme = signal<Theme>("light");
 
   constructor() {
     // Cargar tema guardado o detectar preferencia del sistema
-    const savedTheme = localStorage.getItem('theme') as Theme;
+    const savedTheme = localStorage.getItem("theme") as Theme;
     if (savedTheme) {
       this.currentTheme.set(savedTheme);
     } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      this.currentTheme.set(prefersDark ? 'dark' : 'light');
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      this.currentTheme.set(prefersDark ? "dark" : "light");
     }
 
     // Aplicar tema al cargar
@@ -32,20 +34,20 @@ export class ThemeService {
   }
 
   toggleTheme() {
-    const newTheme: Theme = this.currentTheme() === 'light' ? 'dark' : 'light';
+    const newTheme: Theme = this.currentTheme() === "light" ? "dark" : "light";
     this.currentTheme.set(newTheme);
-    localStorage.setItem('theme', newTheme);
+    localStorage.setItem("theme", newTheme);
   }
 
   private applyTheme(theme: Theme) {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark-theme');
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark-theme");
     } else {
-      document.documentElement.classList.remove('dark-theme');
+      document.documentElement.classList.remove("dark-theme");
     }
   }
 
   isDark() {
-    return this.currentTheme() === 'dark';
+    return this.currentTheme() === "dark";
   }
 }
