@@ -59,14 +59,12 @@ import { TranslationService } from "../../services/translation.service";
   styles: [
     `
       .footer {
-        background: linear-gradient(
-          135deg,
-          var(--gray-900) 0%,
-          var(--gray-800) 100%
-        );
-        color: var(--gray-100);
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
         padding: var(--spacing-3xl) 0 var(--spacing-lg);
         margin-top: var(--spacing-3xl);
+        border-top: 1px solid var(--gray-200);
+        transition: all var(--transition-base);
       }
 
       .footer-content {
@@ -87,14 +85,14 @@ import { TranslationService } from "../../services/translation.service";
 
       .footer-section {
         h3 {
-          color: white;
+          color: var(--text-primary);
           font-size: 1.5rem;
           font-weight: 700;
           margin-bottom: var(--spacing-md);
           background: linear-gradient(
             135deg,
-            var(--primary-400) 0%,
-            var(--primary-600) 100%
+            var(--primary-500) 0%,
+            var(--primary-700) 100%
           );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -102,20 +100,20 @@ import { TranslationService } from "../../services/translation.service";
         }
 
         h4 {
-          color: var(--gray-200);
+          color: var(--text-primary);
           font-size: 1.125rem;
           font-weight: 600;
           margin-bottom: var(--spacing-md);
         }
 
         p {
-          color: var(--gray-400);
+          color: var(--text-secondary);
           line-height: 1.8;
           margin: 0;
 
           i {
             margin-right: var(--spacing-sm);
-            color: var(--primary-400);
+            color: var(--primary-500);
           }
         }
       }
@@ -126,7 +124,7 @@ import { TranslationService } from "../../services/translation.service";
         gap: var(--spacing-md);
 
         a {
-          color: var(--gray-400);
+          color: var(--text-secondary);
           text-decoration: none;
           display: flex;
           align-items: center;
@@ -134,12 +132,12 @@ import { TranslationService } from "../../services/translation.service";
           transition: all var(--transition-fast);
 
           i {
-            color: var(--primary-400);
+            color: var(--primary-500);
             font-size: 1.125rem;
           }
 
           &:hover {
-            color: var(--primary-400);
+            color: var(--primary-500);
             transform: translateX(4px);
           }
         }
@@ -149,7 +147,7 @@ import { TranslationService } from "../../services/translation.service";
         max-width: 1200px;
         margin: 0 auto;
         padding: var(--spacing-lg) var(--spacing-xl) 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-top: 1px solid var(--gray-200);
         text-align: center;
 
         @media (max-width: 768px) {
@@ -157,14 +155,15 @@ import { TranslationService } from "../../services/translation.service";
         }
 
         p {
-          color: var(--gray-500);
+          color: var(--text-secondary);
           margin: var(--spacing-sm) 0;
           font-size: 0.875rem;
         }
 
         .footer-tech {
-          color: var(--gray-600);
+          color: var(--text-secondary);
           font-size: 0.8rem;
+          opacity: 0.8;
         }
       }
     `,
