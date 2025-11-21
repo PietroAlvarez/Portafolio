@@ -58,7 +58,6 @@ src/app/
 1. Actualiza información personal en los componentes
 2. Modifica proyectos en `projects.component.ts`
 3. Configura EmailJS en `contact.component.ts`
-4. Agrega tu CV en `src/assets/`
 
 ---
 
