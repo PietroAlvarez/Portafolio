@@ -220,6 +220,14 @@
       color: #7c3aed;
     }
   }
+
+  &.reservalab {
+    background: linear-gradient(135deg, #cffafe, #a5f3fc);
+
+    i {
+      color: #0e7490;
+    }
+  }
 }
 
 .project-status {
