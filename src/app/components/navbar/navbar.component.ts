@@ -14,7 +14,7 @@ import { TranslationService } from "../../services/translation.service";
       <p-menubar [model]="items" styleClass="custom-menubar">
         <ng-template pTemplate="start">
           <div class="logo">
-            <span class="logo-text">Mi Portafolio</span>
+            <span class="logo-text">Pietro Alvarez</span>
           </div>
         </ng-template>
       </p-menubar>
@@ -42,6 +42,12 @@ export class NavbarComponent {
         label: this.translationService.translate("nav.projects"),
         icon: "pi pi-briefcase",
         routerLink: ["/proyectos"],
+      },
+      {
+        label: "GitHub",
+        icon: "pi pi-github",
+        url: "https://github.com/PietroAlvarez",
+        target: "_blank",
       },
       {
         label: this.translationService.translate("nav.cv"),
