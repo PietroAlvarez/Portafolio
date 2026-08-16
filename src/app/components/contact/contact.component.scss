@@ -78,6 +78,7 @@
   padding: var(--spacing-md);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
+  text-decoration: none;
   
   &:hover {
     background: var(--gray-50);
@@ -286,4 +287,14 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--spacing-sm);
+  color: var(--primary-600);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }

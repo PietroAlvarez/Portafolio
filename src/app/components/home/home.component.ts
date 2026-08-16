@@ -12,11 +12,20 @@ import { TranslationService } from "../../services/translation.service";
     <div class="home-container">
       <section class="hero-section">
         <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="status-dot"></span>
+            {{ t("home.availability") }}
+          </div>
           <h1 class="hero-title">{{ t("home.greeting") }}</h1>
           <h2 class="hero-subtitle">{{ t("home.title") }}</h2>
           <p class="hero-description">
             {{ t("home.description") }}
           </p>
+          <div class="professional-highlights" aria-label="Tecnologías destacadas">
+            <span>Java 21 · Spring Boot</span>
+            <span>Angular · TypeScript</span>
+            <span>PostgreSQL · API REST</span>
+          </div>
           <div class="hero-actions">
             <p-button
               [label]="t('home.viewProjects')"
@@ -33,23 +42,28 @@ import { TranslationService } from "../../services/translation.service";
             >
             </p-button>
             <p-button
-              [label]="t('home.contact')"
-              icon="pi pi-envelope"
-              routerLink="/contacto"
+              label="GitHub"
+              icon="pi pi-github"
+              (onClick)="openExternal(githubUrl)"
               styleClass="p-button-lg p-button-outlined"
             >
             </p-button>
           </div>
+          <p class="work-mode">
+            <i class="pi pi-map-marker"></i>
+            {{ t("home.workMode") }}
+          </p>
         </div>
         <div class="hero-image">
           <div class="avatar-container">
             <div class="avatar-wrapper">
               <div class="avatar-circle">
-                <i class="pi pi-user"></i>
+                <i class="pi pi-code"></i>
               </div>
               <div class="avatar-glow"></div>
             </div>
             <p class="avatar-caption">Pietro Alvarez</p>
+            <p class="avatar-role">Java · Angular · Soporte TI · RPA</p>
           </div>
         </div>
       </section>
@@ -64,7 +78,7 @@ import { TranslationService } from "../../services/translation.service";
                 style="font-size: 2rem; color: #2563eb;"
               ></i>
               <h4>{{ t("home.frontend") }}</h4>
-              <p>Angular, React, TypeScript, HTML5, CSS3</p>
+              <p>Angular, TypeScript, JavaScript, HTML5, CSS3</p>
             </div>
             <div class="skill-card">
               <i
@@ -72,12 +86,12 @@ import { TranslationService } from "../../services/translation.service";
                 style="font-size: 2rem; color: #059669;"
               ></i>
               <h4>{{ t("home.backend") }}</h4>
-              <p>Node.js, Express, REST APIs, Bases de Datos</p>
+              <p>Java 21, Spring Boot, API REST, PostgreSQL</p>
             </div>
             <div class="skill-card">
               <i class="pi pi-cog" style="font-size: 2rem; color: #dc2626;"></i>
-              <h4>Herramientas</h4>
-              <p>Git, Docker, CI/CD, Testing</p>
+              <h4>{{ t("home.operations") }}</h4>
+              <p>Soporte TI, redes, Help Desk, RPA y monitoreo</p>
             </div>
           </div>
         </div>
@@ -88,6 +102,7 @@ import { TranslationService } from "../../services/translation.service";
 })
 export class HomeComponent {
   translationService = inject(TranslationService);
+  readonly githubUrl = "https://github.com/PietroAlvarez";
 
   t(key: string): string {
     return this.translationService.translate(key);
@@ -104,5 +119,9 @@ export class HomeComponent {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  }
+
+  openExternal(url: string) {
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 }

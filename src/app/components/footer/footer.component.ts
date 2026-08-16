@@ -12,16 +12,16 @@ import { TranslationService } from "../../services/translation.service";
         <div class="footer-section">
           <h3>Pietro Alvarez</h3>
           <p>
-            Programador web especializado en Angular, Node.js y desarrollo full
-            stack.
+            Desarrollador Java/Angular con experiencia en soporte TI,
+            monitoreo operativo y automatización RPA.
           </p>
         </div>
 
         <div class="footer-section">
           <h4>Contacto</h4>
           <div class="footer-links">
-            <a href="mailto:pietro103@hotmail.com">
-              <i class="pi pi-envelope"></i> pietro103&#64;hotmail.com
+            <a href="mailto:pietro103.lavoro@gmail.com">
+              <i class="pi pi-envelope"></i> pietro103.lavoro&#64;gmail.com
             </a>
             <a
               href="https://www.linkedin.com/in/pietro-antonello-francesco-alvarez-gazzola-33280438"
@@ -29,6 +29,13 @@ import { TranslationService } from "../../services/translation.service";
               rel="noopener"
             >
               <i class="pi pi-linkedin"></i> LinkedIn
+            </a>
+            <a
+              href="https://github.com/PietroAlvarez"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="pi pi-github"></i> GitHub
             </a>
             <a
               href="assets/CV_Pietro_Alvarez.pdf"
@@ -43,7 +50,8 @@ import { TranslationService } from "../../services/translation.service";
 
         <div class="footer-section">
           <h4>Ubicación</h4>
-          <p><i class="pi pi-map-marker"></i> Italia / Chile</p>
+          <p><i class="pi pi-map-marker"></i> Santiago, Chile</p>
+          <p><i class="pi pi-globe"></i> Remoto internacional</p>
         </div>
       </div>
 
@@ -52,7 +60,7 @@ import { TranslationService } from "../../services/translation.service";
           &copy; {{ currentYear }} Pietro Alvarez. Todos los derechos
           reservados.
         </p>
-        <p class="footer-tech">Desarrollado con Angular 17 & PrimeNG</p>
+        <p class="footer-tech">Desarrollado con Angular 17, TypeScript y PrimeNG</p>
       </div>
     </footer>
   `,
