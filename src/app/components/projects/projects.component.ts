@@ -119,6 +119,15 @@ export class ProjectsComponent {
       repositoryUrl: "https://github.com/PietroAlvarez/FlowWatch",
       demoUrl: "https://pietroalvarez-flowwatch-demo.onrender.com",
     },
+    {
+      titleKey: "projects.reservalab.title",
+      descriptionKey: "projects.reservalab.desc",
+      icon: "pi pi-calendar",
+      accent: "reservalab",
+      technologies: ["React", "TypeScript", "Vite", "Supabase", "PostgreSQL", "GitHub Pages"],
+      repositoryUrl: "https://github.com/PietroAlvarez/ReservaLab",
+      demoUrl: "https://pietroalvarez.github.io/ReservaLab/",
+    },
   ];
 
   t(key: string): string {
