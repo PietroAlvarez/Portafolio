@@ -120,13 +120,13 @@ export class ProjectsComponent {
       demoUrl: "https://pietroalvarez-flowwatch-demo.onrender.com",
     },
     {
-      titleKey: "projects.reservalab.title",
-      descriptionKey: "projects.reservalab.desc",
-      icon: "pi pi-calendar",
-      accent: "reservalab",
-      technologies: ["React", "TypeScript", "Vite", "Supabase", "PostgreSQL", "GitHub Pages"],
-      repositoryUrl: "https://github.com/PietroAlvarez/ReservaLab",
-      demoUrl: "https://pietroalvarez.github.io/ReservaLab/",
+      titleKey: "projects.centroti.title",
+      descriptionKey: "projects.centroti.desc",
+      icon: "pi pi-desktop",
+      accent: "centroti",
+      technologies: ["Angular", "TypeScript", "Java 21", "Spring Boot", "PostgreSQL", "Vercel"],
+      repositoryUrl: "https://github.com/PietroAlvarez/CentroTI",
+      demoUrl: "https://centro-ti.vercel.app/",
     },
   ];
 
